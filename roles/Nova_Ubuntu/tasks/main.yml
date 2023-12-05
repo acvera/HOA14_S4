@@ -1,0 +1,28 @@
+  - name: install nova (Ubuntu)
+    apt:
+      name:
+        - nova-api
+        - nova-conductor
+        - nova-novncproxy
+        - nova-scheduler
+      state: present
+
+  - name: restart nova-api service
+    service:
+      name: nova-api
+      state: restarted
+
+  - name: restart nova-scheduler service
+    service:
+      name: nova-scheduler
+      state: restarted
+
+  - name: restart nova-conductor service
+    service:
+      name: nova-conductor
+      state: restarted
+
+  - name: restart nova-novncproxy service
+    service:
+      name: nova-novncproxy
+      state: restarted

@@ -1,0 +1,11 @@
+  - name: install keystone (Ubuntu)
+    apt:
+      name: keystone
+      state: present
+
+
+  - name: restart apache2
+    service:
+      name: apache2
+      state: restarted
+

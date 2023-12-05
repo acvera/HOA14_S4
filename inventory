@@ -1,0 +1,11 @@
+[controller_ubuntu]
+192.168.56.110 #ansible_python_interpreter=/usr/bin/python3
+
+[compute_ubuntu]
+192.168.56.110
+
+[controller_centos]
+192.168.56.111
+
+[compute_centos]
+192.168.56.111

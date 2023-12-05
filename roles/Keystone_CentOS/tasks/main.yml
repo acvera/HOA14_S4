@@ -1,0 +1,14 @@
+# Keystone
+- name: Install Keystone packages
+  yum:
+    name:
+      - openstack-keystone
+      - httpd
+      - mod_wsgi
+    state: latest
+
+- name: Keystone Starting / Enabling
+  service:
+    name: httpd.service
+    state: started
+    enabled: true

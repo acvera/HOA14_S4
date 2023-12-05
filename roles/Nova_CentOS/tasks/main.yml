@@ -1,0 +1,18 @@
+  - name: install nova (CentOS)
+    yum:
+      name:
+        - openstack-nova-api
+        - openstack-nova-conductor
+        - openstack-nova-novncproxy
+        - openstack-nova-scheduler
+      state: present
+
+  - name: restart nova-api service
+    service:
+      name: openstack-nova-api
+      state: started
+
+  - name: restart nova-novncproxy service
+    service:
+      name: openstack-nova-novncproxy
+      state: started
